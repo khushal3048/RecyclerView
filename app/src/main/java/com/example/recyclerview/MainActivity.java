@@ -88,7 +88,11 @@ public class MainActivity extends AppCompatActivity {
 
             int position = viewHolder.getAdapterPosition();
 
-            Toast.makeText(getApplicationContext(),pokelst.get(position).getName(),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),pokelst.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+            Intent i = new Intent(MainActivity.this,PokemonDesc.class);
+            i.putExtra("data",pokelst.get(position));
+            startActivity(i);
 
         }
     };
